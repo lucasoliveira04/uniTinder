@@ -1,3 +1,4 @@
 const HOME = "/uniTinder"
+const REGISTER = "/register"
 
-export {HOME}
+export {HOME, REGISTER}
