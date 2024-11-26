@@ -1,0 +1,15 @@
+/* Paleta de cores */
+
+/* 
+    Azul Vibrante: #4A90E2 
+    Branco Puro: #FFFFFF 
+    Azul Claro: #B3D4FC 
+    Cinza Claro: #E5E5E5 
+    Amarelo Suave: #F5C242 
+*/
+
+html, body {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}

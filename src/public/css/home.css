@@ -1,0 +1,217 @@
+/* Layout principal */
+.container-home {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background: linear-gradient(135deg, #4A90E2, #6A85E6, #8F77EA); 
+}
+
+/* Coluna esquerda (login) */
+.container-left {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
+    border-right: 1px solid #ddd;
+    transition: width 0.3s ease;
+}
+
+/* Caixa de login */
+.login-box {
+    text-align: center;
+    padding: 20px;
+    width: 80%;
+}
+
+.login-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4A90E2;
+    margin-bottom: 20px;
+    text-shadow: 0px 3px 10px rgba(74, 144, 226, 0.8);
+}
+
+.login-title span {
+    color: #8F77EA; 
+    text-shadow: 0px 3px 10px rgba(143, 119, 234, 0.8); 
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.login-input {
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    width: calc(100% - 40px); 
+    box-sizing: border-box; 
+}
+
+.login-input:focus {
+    border-color: #4A90E2;
+}
+
+.container-button-login{
+    display: flex;
+    justify-content: center;
+}
+
+.login-btn {
+    width: 250px;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(135deg, #4A90E2, #8F77EA); 
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0px 5px 15px rgba(74, 144, 226, 0.4);
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.password-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.toggle-password-btn {
+    position: absolute;
+    right: 50px;
+    top: 50%; 
+    transform: translateY(-50%); 
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #4A90E2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-password-btn:hover {
+    color: #357ABD;
+}
+
+.login-btn:hover {
+    background: linear-gradient(135deg, #3A75C6, #7A62D9);
+    box-shadow: 0px 8px 20px rgba(58, 117, 198, 0.6);
+}
+
+.register-option {
+    font-size: 0.9rem;
+    color: #555555;
+}
+
+.register-option a {
+    color: #4A90E2;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.register-option a:hover {
+    color: #357ABD;
+    text-decoration: underline;
+}
+
+/* Coluna direita (carrossel) */
+.container-right {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(135deg, #6A85E6, #8F77EA); 
+    overflow: hidden;
+    transition: width 0.3s ease;
+}
+
+/* Carrossel */
+.carousel {
+    width: 90%;
+    height: 80%;
+    display: flex;
+    gap: 10px;
+    animation: slide 10s infinite;
+    position: absolute;
+}
+
+.carousel-image {
+    min-width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Animação do carrossel */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    33% {
+        transform: translateX(-100%);
+    }
+    66% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container-home {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-left {
+        width: 100%;
+        height: 100%;
+        border-right: none;
+        box-shadow: none;
+    }
+
+    .container-right {
+        display: none;
+    }
+
+    .login-box {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .login-title {
+        font-size: 1.8rem;
+    }
+
+    .login-btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
